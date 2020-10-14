@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -28,6 +28,18 @@
                                 <rect key="frame" x="127" y="434" width="160" height="160"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRe-4Y-GKQ">
+                                <rect key="frame" x="142" y="758" width="130" height="48"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="enr-Ne-Ehf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="trafficLightToggle" destination="BYZ-38-t0r" eventType="touchUpInside" id="8lH-9o-UND"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -36,6 +48,7 @@
                             <constraint firstItem="CJX-O9-rn9" firstAttribute="top" secondItem="wXY-2v-FHP" secondAttribute="bottom" constant="8" symbolic="YES" id="9AR-uN-zcE"/>
                             <constraint firstItem="CJX-O9-rn9" firstAttribute="height" secondItem="wXY-2v-FHP" secondAttribute="height" id="AAX-4p-Wwh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CJX-O9-rn9" secondAttribute="trailing" constant="127" id="DrP-bl-n2L"/>
+                            <constraint firstItem="fRe-4Y-GKQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GHr-fZ-kqI"/>
                             <constraint firstItem="AJS-zI-o3O" firstAttribute="top" secondItem="CJX-O9-rn9" secondAttribute="bottom" constant="8" symbolic="YES" id="LBP-bf-MMc"/>
                             <constraint firstItem="CJX-O9-rn9" firstAttribute="width" secondItem="wXY-2v-FHP" secondAttribute="width" id="NDI-yp-4me"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AJS-zI-o3O" secondAttribute="bottom" constant="268" id="PxE-Xv-UhW"/>
@@ -43,15 +56,22 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wXY-2v-FHP" secondAttribute="trailing" constant="127" id="gZu-EK-rU1"/>
                             <constraint firstItem="AJS-zI-o3O" firstAttribute="width" secondItem="wXY-2v-FHP" secondAttribute="width" id="gbi-IJ-kXv"/>
                             <constraint firstItem="AJS-zI-o3O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="mKL-P3-RHf"/>
+                            <constraint firstItem="fRe-4Y-GKQ" firstAttribute="top" secondItem="AJS-zI-o3O" secondAttribute="bottom" constant="164" id="oe7-Av-DKP"/>
                             <constraint firstItem="CJX-O9-rn9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="og1-Yh-mUd"/>
                             <constraint firstItem="wXY-2v-FHP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="pkz-Wd-uTS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AJS-zI-o3O" secondAttribute="trailing" constant="127" id="ywe-je-paR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="wXY-2v-FHP" id="Xgm-1n-nyK"/>
+                        <outlet property="lightToggleButton" destination="fRe-4Y-GKQ" id="CDO-61-Gqt"/>
+                        <outlet property="redLight" destination="AJS-zI-o3O" id="nbJ-Ss-Oh7"/>
+                        <outlet property="yellowLight" destination="CJX-O9-rn9" id="1jY-Fm-p3P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="94"/>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
     </scenes>
     <resources>
