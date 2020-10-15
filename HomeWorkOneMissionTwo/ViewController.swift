@@ -23,9 +23,9 @@ class ViewController: UIViewController {
         yellowLight.alpha = 0.3
         redLight.alpha = 0.3
         
-        greenLight.layer.cornerRadius = 80
-        yellowLight.layer.cornerRadius = 80
-        redLight.layer.cornerRadius = 80
+        greenLight.layer.cornerRadius = greenLight.frame.size.height * 0.5
+        yellowLight.layer.cornerRadius = yellowLight.frame.size.height * 0.5
+        redLight.layer.cornerRadius = redLight.frame.size.height * 0.5
         lightToggleButton.layer.cornerRadius = 20
     }
     
